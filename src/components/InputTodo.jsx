@@ -15,6 +15,7 @@ export default function InputTodo() {
       console.error(error);
     }
   };
+ 
   return (
     <div>
       <h1 className="text-center">PERN Todo List</h1>
