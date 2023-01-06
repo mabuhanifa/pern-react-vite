@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
 
 export default function EditTodo() {
-  return (
-    <div>EditTodo</div>
-  )
+  const editTodos = async (id) => {
+    try {
+      const res = await fetch(`http://localhost:5000/todos/${id}`, {
+        method: "PUT",
+      });
+      fetchTodos();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  return <div>EditTodo</div>;
 }
